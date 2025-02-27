@@ -4,7 +4,7 @@ require_once 'include/db.inc.php';
 require_once 'include/func.inc.php';
 
 if (!isset($_SESSION['user']) || $_SERVER['REQUEST_METHOD'] != 'POST') {
-    header('Location: update_user.php');
+    header('Location: user_update.php');
 } else if ($_SESSION['user']['role'] != 'admin') {
     to_other_profile($_SESSION['user']['role']);
 }
@@ -28,7 +28,7 @@ if (!isset($_SESSION['user']) || $_SERVER['REQUEST_METHOD'] != 'POST') {
 
     <h1>Измените данные</h1>
     <main>
-        <form action='./include/update_user.inc.php' method='post'>
+        <form action='./include/user_update.inc.php' method='post'>
             <?php
             $_SESSION['user_to_edit_id'] = $_POST['user_to_edit'];
             $stmt = $pdo->prepare("SELECT * FROM employees WHERE id = :id;");

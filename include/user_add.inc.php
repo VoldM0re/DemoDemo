@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ]);
 
     $_SESSION['message'] = "Новый пользователь $login успешно добавлен!";
-    header('Location: ../add_user.php');
+    header('Location: ../user_add.php');
 
     $stmt = null;
     $pdo = null;

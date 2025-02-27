@@ -61,9 +61,9 @@ if (!isset($_SESSION['user'])) {
         </table>
 
         <div class="admin-buttons">
-            <a href="add_user.php" class='link-button admin-button'>Добавить</a>
-            <a href="update_user.php" class='link-button admin-button'>Изменить</a>
-            <a href="delete_user.php" class='link-button admin-button'>Удалить</a>
+            <a href="user_add.php" class='link-button admin-button'>Добавить</a>
+            <a href="user_update.php" class='link-button admin-button'>Изменить</a>
+            <a href="user_delete.php" class='link-button admin-button'>Удалить</a>
         </div>
     </main>
 

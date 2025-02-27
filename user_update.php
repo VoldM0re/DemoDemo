@@ -28,7 +28,7 @@ if (!isset($_SESSION['user'])) {
 
     <h1>Выберите пользователя для изменения</h1>
     <main>
-        <form action='./updating_user.php' method='post'>
+        <form action='./user_updating.php' method='post'>
             <?php
             $stmt = $pdo->prepare("SELECT * FROM employees WHERE role = 'employee' OR role = 'manager';");
             $stmt->execute();

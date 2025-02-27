@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ]);
     $_SESSION['message'] = 'Выбранные пользователи изменены!';
     unset($_SESSION['user_to_edit_id']);
-    header('Location: ../update_user.php');
+    header('Location: ../user_update.php');
 
     $stmt = null;
     $pdo = null;

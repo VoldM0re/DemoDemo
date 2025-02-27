@@ -29,7 +29,7 @@ if (!isset($_SESSION['user'])) {
 
     <h1>Удалить пользователя</h1>
     <main>
-        <form action='./include/delete_user.inc.php' method='post'>
+        <form action='./include/user_delete.inc.php' method='post'>
             <?php
             $stmt = $pdo->prepare("SELECT * FROM employees WHERE role = 'employee' OR role = 'manager';");
             $stmt->execute();

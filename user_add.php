@@ -28,7 +28,7 @@ if (!isset($_SESSION['user'])) {
 
     <h1>Добавить сотрудника</h1>
     <main>
-        <form action='./include/add_user.inc.php' method='post'>
+        <form action='./include/user_add.inc.php' method='post'>
             <input type='text' name='login' placeholder='Логин'>
             <input type='password' name='pwd' placeholder='Пароль'>
             <input type='text' name='name' placeholder='Имя'>

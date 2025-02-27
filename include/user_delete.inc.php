@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $_SESSION['message'] = 'Выбранные пользователи удалены!';
-    header('Location: ../delete_user.php');
+    header('Location: ../user_delete.php');
 
     $stmt = null;
     $pdo = null;
