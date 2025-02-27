@@ -27,13 +27,7 @@ if (isset($_SESSION['user'])) {
     </main>
 
     <?php
-    if (isset($_SESSION['error_message'])) {
-        echo '
-            <div class="error-messages">
-                <p class="error-message">' . $_SESSION['error_message'] . '</p>
-            </div>';
-        unset($_SESSION['error_message']);
-    }
+    display_message('error-message')
     ?>
     <pre></pre>
 </body>

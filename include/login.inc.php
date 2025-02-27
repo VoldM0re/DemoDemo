@@ -26,14 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 ];
                 go_to_profile($_SESSION['user']['role']);
             } else {
-                $_SESSION['error_message'] = 'Неправильное имя пользователя или пароль!';
+                $_SESSION['error-message'] = 'Неверное имя пользователя или пароль!';
                 header('Location: ../index.php');
             }
         } catch (PDOException $e) {
             die("Ошибка при выполнении SQL-запроса: " . $e->getMessage());
         }
     } else {
-        $_SESSION['error_message'] = 'Заполните все поля!';
+        $_SESSION['error-message'] = 'Заполните все поля!';
         header('Location: ../index.php');
     }
 } else {

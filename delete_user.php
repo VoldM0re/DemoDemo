@@ -46,13 +46,7 @@ if (!isset($_SESSION['user'])) {
         </form>
     </main>
     <?php
-    if (isset($_SESSION['message'])) {
-        echo '
-        <div class="messages">
-            <p class="message">' . $_SESSION['message'] . '</p>
-        </div>';
-        unset($_SESSION['message']);
-    }
+    display_message('message')
     ?>
 </body>
 

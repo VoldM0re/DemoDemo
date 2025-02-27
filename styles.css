@@ -1,3 +1,14 @@
+:root {
+    --primary-bg-color: #212121;
+    --text-color: #fff;
+    --accent-color: #ffffff;
+    --error-border-color: #ff6868;
+    --success-border-color: #93ff68;
+    --shadow-color: rgb(24, 24, 24);
+    --gap-small: 15px;
+    --gap-medium: 30px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,14 +16,14 @@
 }
 
 body {
-    background-color: #212121;
-    color: #fff;
-    height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
     font-family: sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-bg-color);
 }
 
 main {
@@ -20,15 +31,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: var(--gap-medium);
     max-width: 520px;
 }
 
 form {
-    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap-small);
+    max-width: 400px;
 }
 
 a {
@@ -37,8 +48,8 @@ a {
 }
 
 h1 {
+    margin: var(--gap-medium) 0;
     text-align: center;
-    margin: 30px 0;
 }
 
 input {
@@ -48,21 +59,28 @@ input {
 
 input[type='text'],
 input[type='password'] {
+    outline: none;
+    color: var(--text-color);
     background-color: transparent;
     border-width: 0 0 1px 0;
-    outline: none;
-    color: #fff;
 }
 
-input[type='submit'] {
-    margin-top: 15px;
-    background-color: #ffffff;
+input[type='submit'],
+.link-button {
+    font: inherit;
+    padding: var(--gap-small);
+    outline: none;
+    margin-top: var(--gap-small);
+    color: #000000;
+    background-color: var(--accent-color);
     border: none;
     border-radius: 5px;
-    color: #000000;
-    box-shadow: 0px 0px 10px rgb(24, 24, 24);
+    box-shadow: 0px 0px 10px var(--shadow-color);
     cursor: pointer;
-    outline: none;
+}
+
+label {
+    user-select: none;
 }
 
 table {
@@ -83,54 +101,43 @@ select {
     margin-right: 10px;
 }
 
-.error-messages {
-    margin-top: 30px;
-    padding: 15px;
-    border: #ff6868 1px solid;
+.error-messages,
+.messages {
+    margin-top: var(--gap-medium);
+    padding: var(--gap-small);
     border-radius: 5px;
+}
+
+.error-messages {
+    border: 1px solid var(--error-border-color);
 }
 
 .error-message {
-    color: #ff6868;
+    color: var(--error-border-color);
 }
 
 .messages {
-    margin-top: 30px;
-    padding: 15px;
-    border: #93ff68 1px solid;
-    border-radius: 5px;
+    border: 1px solid var(--success-border-color);
 }
 
 .message {
-    color: #93ff68;
-}
-
-.link-button {
-    padding: 10px;
-    font: inherit;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    color: #000000;
-    box-shadow: 0px 0px 10px rgb(24, 24, 24);
-    cursor: pointer;
-    outline: none;
+    color: var(--success-border-color);
 }
 
 .menu {
     position: absolute;
-    left: 50px;
     top: 50px;
+    left: 50px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap-small);
 }
 
 .admin-buttons {
-    margin-top: 30px;
-    width: 100%;
     display: flex;
-    gap: 15px;
+    gap: var(--gap-small);
+    width: 100%;
+    margin-top: var(--gap-medium);
 }
 
 .admin-button {
@@ -139,9 +146,9 @@ select {
 }
 
 .users_list {
+    padding: var(--gap-small);
     background-color: #0f0f0f;
     border-radius: 5px;
-    padding: 15px;
     cursor: pointer;
 }
 
@@ -152,14 +159,14 @@ select {
 }
 
 .diagram {
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    margin-top: var(--gap-medium);
 }
 
 .diagram-column {
-    background-color: #636363;
-    padding: 10px;
     min-height: 40px;
+    padding: 10px;
+    background-color: #636363;
 }

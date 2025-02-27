@@ -26,3 +26,14 @@ function to_other_profile($user_role)
         die();
     }
 }
+
+function display_message($type)
+{
+    if (isset($_SESSION[$type])) {
+        echo '
+        <div class="' . $type . 's">
+            <p class="' . $type . '">' . $_SESSION[$type] . '</p>
+        </div>';
+        unset($_SESSION[$type]);
+    }
+}
