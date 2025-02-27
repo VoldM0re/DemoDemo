@@ -67,7 +67,6 @@ if (!isset($_SESSION['user'])) {
         </div>
     </main>
 
-    <!-- <pre><?= print_r($users); ?></pre> -->
 </body>
 
 </html>

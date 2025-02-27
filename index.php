@@ -29,7 +29,6 @@ if (isset($_SESSION['user'])) {
     <?php
     display_message('error-message')
     ?>
-    <pre></pre>
 </body>
 
 </html>

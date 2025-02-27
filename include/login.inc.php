@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->execute([':login' => $login, ':pwd' => $pwd]);
             $user_data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            // $_SESSION['DEBUG'] = [$user_data, password_verify($pwd, $user_data['pwd'])];
             if ($user_data && $pwd == $user_data['pwd']) {
                 $_SESSION['user'] = [
                     'id' => $user_data['id'],
