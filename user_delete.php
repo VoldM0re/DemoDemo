@@ -46,7 +46,8 @@ if (!isset($_SESSION['user'])) {
         </form>
     </main>
     <?php
-    display_message('message')
+    display_message('message');
+    display_message('error-message');
     ?>
 </body>
 

@@ -1,0 +1,10 @@
+Options -Indexes
+<Files db.inc.php>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files func.inc.php>
+    Order allow,deny
+    Deny from all
+</Files>

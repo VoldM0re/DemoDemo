@@ -8,6 +8,11 @@ if (!isset($_SESSION['user']) || $_SERVER['REQUEST_METHOD'] != 'POST') {
 } else if ($_SESSION['user']['role'] != 'admin') {
     to_other_profile($_SESSION['user']['role']);
 }
+
+if (!isset($_POST['user_to_edit'])) {
+    $_SESSION['error-message'] = 'Выберите пользователя!';
+    header('Location: user_update.php');
+}
 ?>
 
 <!DOCTYPE html>
